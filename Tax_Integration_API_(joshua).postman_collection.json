@@ -1,0 +1,83 @@
+{
+  "info": {
+    "name": "Tax Integration API (Student B)",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Ping",
+      "request": {
+        "method": "GET",
+        "url": "{{base_url_student_b}}/ping"
+      }
+    },
+    {
+      "name": "Submit Invoice - Success",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": "{{base_url_student_b}}/api/v1/invoices/submit?mode=success",
+        "body": {
+          "mode": "raw",
+          "raw": "{{invoice_body}}"
+        }
+      }
+    },
+    {
+      "name": "Submit Invoice - Validation Error",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": "{{base_url_student_b}}/api/v1/invoices/submit?mode=validation_error",
+        "body": {
+          "mode": "raw",
+          "raw": "{{invoice_body}}"
+        }
+      }
+    },
+    {
+      "name": "Submit Invoice - Duplicate",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": "{{base_url_student_b}}/api/v1/invoices/submit?mode=duplicate",
+        "body": {
+          "mode": "raw",
+          "raw": "{{invoice_body}}"
+        }
+      }
+    },
+    {
+      "name": "Submit Invoice - Server Error",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": "{{base_url_student_b}}/api/v1/invoices/submit?mode=error",
+        "body": {
+          "mode": "raw",
+          "raw": "{{invoice_body}}"
+        }
+      }
+    }
+  ]
+}

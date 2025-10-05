@@ -1,0 +1,67 @@
+{
+  "info": {
+    "name": "Backend API (Student C)",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Ping",
+      "request": {
+        "method": "GET",
+        "url": "{{base_url_student_c}}/ping"
+      }
+    },
+    {
+      "name": "Seed Data",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "X-API-KEY",
+            "value": "{{api_key}}"
+          }
+        ],
+        "url": "{{base_url_student_c}}/api/v1/seed"
+      }
+    },
+    {
+      "name": "Get Invoice Status",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "X-API-KEY",
+            "value": "{{api_key}}"
+          }
+        ],
+        "url": "{{base_url_student_c}}/api/v1/invoices/{{invoice_id}}/status"
+      }
+    },
+    {
+      "name": "Daily Sales Report",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "X-API-KEY",
+            "value": "{{api_key}}"
+          }
+        ],
+        "url": "{{base_url_student_c}}/api/v1/reports/daily-sales"
+      }
+    },
+    {
+      "name": "Tax Report",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "X-API-KEY",
+            "value": "{{api_key}}"
+          }
+        ],
+        "url": "{{base_url_student_c}}/api/v1/reports/tax"
+      }
+    }
+  ]
+}
